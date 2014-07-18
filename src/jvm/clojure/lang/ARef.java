@@ -26,7 +26,7 @@ public ARef(IPersistentMap meta){
 	super(meta);
 }
 
-void validate(IFn vf, Object val){
+protected void validate(IFn vf, Object val){
 	try
 		{
 		if(vf != null && !RT.booleanCast(vf.invoke(val)))
@@ -42,7 +42,7 @@ void validate(IFn vf, Object val){
 		}
 }
 
-void validate(Object val){
+protected void validate(Object val){
 	validate(validator, val);
 }
 
